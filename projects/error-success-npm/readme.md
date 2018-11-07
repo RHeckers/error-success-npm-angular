@@ -6,7 +6,7 @@ This is a simple to use NPM package for Angular projects. It is a service to han
 
 2. import it on the pages you want to make use of error or success messages
 ```typescript
-import { ErrorSuccessNpmService } from 'error-success-npm';
+import { ErrorSuccessNpmService } from 'error-success-npm/src/lib/error-success-npm.service';
 ```
 
 3. Inject it as a dependency
@@ -32,6 +32,6 @@ this.errorSuccessMsg.insertMsgAfter("This is a test error", this.titleEl, 2000);
 // Option three insert message on top of the page: 
 //Function parameters: (message, duration in milliseconds, type 'error' or 'success' optional?, className optional? )
 // the 'type' and 'className' parameters are optional. type can be set to change the defualt styling from red to green, className is to add your own class to the error messages. 
-this.errorSuccessMsg.insertMsgAfter("This is a test error", 2000);
+this.errorSuccessMsg.insertMsgTopOfPage("This is a test error", 2000);
 
 ```
