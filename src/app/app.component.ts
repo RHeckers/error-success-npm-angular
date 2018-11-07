@@ -21,7 +21,7 @@ export class AppComponent implements OnInit{
   }
 
   test(){
-    this.errorSuccessMsg.swapElementWithMsg("This is a test error", this.titleEl, 2000);
+    this.errorSuccessMsg.centeredPopOverMsg("This is a test error", 2000);
   }
 
   
