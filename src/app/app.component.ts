@@ -17,10 +17,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.titleEl = document.getElementById('title');
-    setTimeout(() => {
-      this.test();
-      
-    }, 2000);
+    this.test();
   }
 
   test(){
