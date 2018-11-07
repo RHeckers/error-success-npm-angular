@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "error-success-npm": [
+        "dist/error-success-npm"
+      ],
+      "error-success-npm/*": [
+        "dist/error-success-npm/*"
+      ]
+    }
   }
 }
