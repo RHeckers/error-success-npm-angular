@@ -19,19 +19,29 @@ constructor(private errorSuccessMsg: ErrorSuccessNpmService){
 4. Use the package like this:
  ```typescript
  // Option one insert message before an element: 
- //Function parameters: (message, element To InsertBefore, duration in milliseconds, type 'error' or 'success' optional?, className optional? )
+ // Function parameters: (message, element To InsertBefore, duration in milliseconds, type 'error' or 'success' is optional, className is optional)
  // the 'type' and 'className' parameters are optional. type can be set to change the defualt styling from red to green, className is to add your own class to the error messages. 
-this.errorSuccessMsg.insertMsgBefore("This is a test error", this.titleEl, 2000);
+this.errorSuccessMsg.insertMsgBefore("This is a test error", this.yourEllement, 2000);
 
 
 // Option two insert message after an element: 
-//Function parameters: (message, element To InsertBefore, duration in milliseconds, type 'error' or 'success' optional?, className optional? )
+// Function parameters: (message, element To InsertBefore, duration in milliseconds, type 'error' or 'success' is optional, className is optional)
 // the 'type' and 'className' parameters are optional. type can be set to change the defualt styling from red to green, className is to add your own class to the error messages. 
-this.errorSuccessMsg.insertMsgAfter("This is a test error", this.titleEl, 2000);
+this.errorSuccessMsg.insertMsgAfter("This is a test error", this.yourEllement, 2000);
 
 // Option three insert message on top of the page: 
-//Function parameters: (message, duration in milliseconds, type 'error' or 'success' optional?, className optional? )
+// Function parameters: (message, duration in milliseconds, type 'error' or 'success' is optional, className is optional )
 // the 'type' and 'className' parameters are optional. type can be set to change the defualt styling from red to green, className is to add your own class to the error messages. 
 this.errorSuccessMsg.insertMsgTopOfPage("This is a test error", 2000);
+
+// Option four insert pop-over with centered message: 
+// Function parameters: (message, duration in milliseconds, type 'error' or 'success' is optional, className is optional )
+// the 'type' and 'className' parameters are optional. type can be set to change the defualt styling from red to green, className is to add your own class to the error messages. 
+this.errorSuccessMsg.centeredPopOverMsg("This is a test error", 2000);
+
+// Option five hide HTML element and place the error on that place, then change it back: 
+// Function parameters: (message, element to swap, duration in milliseconds, type 'error' or 'success' is optional, className is optional )
+// the 'type' and 'className' parameters are optional. type can be set to change the defualt styling from red to green, className is to add your own class to the error messages.
+this.errorSuccessMsg.swapElementWithMsg("This is a test error", this.yourEllement, 2000);
 
 ```

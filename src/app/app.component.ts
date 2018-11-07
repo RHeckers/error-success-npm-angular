@@ -17,11 +17,14 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.titleEl = document.getElementById('title');
-    this.test();
+    setTimeout(() => {
+      this.test();
+      
+    }, 2000);
   }
 
   test(){
-    this.errorSuccessMsg.insertMsgAfter("This is a test error", this.titleEl, 2000);
+    this.errorSuccessMsg.swapElementWithMsg("This is a test error", this.titleEl, 2000);
   }
 
   
